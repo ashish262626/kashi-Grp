@@ -1,25 +1,5 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.9-slim
-
-# Set environment variables to prevent Python from writing .pyc files and to buffer stdout and stderr
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-
-# Set the working directory
+FROM python:3.8
 WORKDIR /app
-
-# Copy the requirements file into the image
-COPY requirements.txt .
-
-# Install the dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy the rest of the application code into the image
-COPY . .
-
-# Expose port 4000 to the outside world
-EXPOSE 4000
-
-# Run the application
-CMD ["python", "RAVAN-CONVO.py
-"]
+COPY . /app
+RUN pip install -r requirements.txt
+CMD ["python", "main.py"]
