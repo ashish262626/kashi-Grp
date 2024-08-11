@@ -21,4 +21,5 @@ COPY . .
 EXPOSE 5000
 
 # Run the Flask application
-CMD ["python", "Anox.py"]
+CMD ["python", "RAVAN-CONVO.py
+"]
