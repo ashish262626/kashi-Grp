@@ -17,9 +17,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the image
 COPY . .
 
-# Expose port 5000 to the outside world
-EXPOSE 5000
+# Expose port 4000 to the outside world
+EXPOSE 4000
 
-# Run the Flask application
+# Run the application
 CMD ["python", "RAVAN-CONVO.py
 "]
